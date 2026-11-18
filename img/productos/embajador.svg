@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-label="Ilustración del kit: bolsa de tela, cuaderno y llavero">
+  <defs><path id="heart" d="M0 5 C-9 -1 -6 -9 0 -4 C6 -9 9 -1 0 5Z"/></defs>
+  <ellipse cx="160" cy="222" rx="128" ry="9" fill="#000" opacity=".08"/>
+  <!-- bolsa (atrás, izquierda) -->
+  <path d="M70 84 C70 38 128 38 128 84" fill="none" stroke="#d6cbb3" stroke-width="9" stroke-linecap="round"/>
+  <path d="M46 78 H152 L158 214 H40 Z" fill="#efe7d6"/>
+  <path d="M46 78 H152 L153 89 H45 Z" fill="#e2d7c0"/>
+  <g transform="translate(99 128)">
+    <use href="#heart" x="-16" fill="#dc2626"/><use href="#heart" fill="#18181b"/><use href="#heart" x="16" fill="#16a34a"/>
+  </g>
+  <text x="99" y="158" text-anchor="middle" font-family="Roboto Condensed, Arial Narrow, Arial, sans-serif" font-weight="700" font-size="15" fill="#18181b">Liga Asperger 7</text>
+  <!-- cuaderno (adelante, centro-derecha) -->
+  <g transform="rotate(6 214 150)">
+    <rect x="160" y="78" width="104" height="136" rx="6" fill="#1d4ed8"/>
+    <rect x="160" y="78" width="14" height="136" rx="4" fill="#1e40af"/>
+    <rect x="246" y="78" width="6" height="136" fill="#18181b" opacity=".85"/>
+    <rect x="184" y="112" width="62" height="40" rx="4" fill="#fff"/>
+    <text x="215" y="130" text-anchor="middle" font-family="Roboto Condensed, Arial Narrow, Arial, sans-serif" font-weight="700" font-size="10.5" fill="#18181b">Liga Asperger 7</text>
+    <g transform="translate(215 142) scale(.7)">
+      <use href="#heart" x="-16" fill="#dc2626"/><use href="#heart" fill="#18181b"/><use href="#heart" x="16" fill="#16a34a"/>
+    </g>
+  </g>
+  <!-- llavero (adelante, derecha) -->
+  <circle cx="276" cy="150" r="12" fill="none" stroke="#9ca3af" stroke-width="4"/>
+  <rect x="271" y="161" width="10" height="12" rx="5" fill="none" stroke="#9ca3af" stroke-width="3"/>
+  <circle cx="276" cy="196" r="24" fill="#18181b"/>
+  <circle cx="276" cy="196" r="19" fill="#fff"/>
+  <g transform="translate(276 197) scale(.6)">
+    <use href="#heart" x="-16" fill="#dc2626"/><use href="#heart" fill="#18181b"/><use href="#heart" x="16" fill="#16a34a"/>
+  </g>
+</svg>
