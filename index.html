@@ -58,6 +58,29 @@
     <!-- ================= VISTA 1: COLABORAR ================= -->
     <div id="vista-colabora">
 
+      <!-- NUEVA SECCIÓN: merchandising solidario (se completa desde js/app.js con los datos de js/config.js) -->
+      <section id="regalo-con-proposito" class="scroll-mt-28 bg-gradient-to-b from-blue-50/70 to-white dark:from-blue-950/30 dark:to-zinc-800 border-y border-blue-100 dark:border-zinc-700 py-12">
+        <div class="max-w-5xl mx-auto px-4">
+          <div class="text-center mb-8">
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-white dark:bg-zinc-800 border border-blue-200 dark:border-blue-700 rounded-full px-3 py-1 mb-4">
+              <span aria-hidden="true">🎁</span> Nuevo · Campaña solidaria
+            </span>
+            <h2 id="campania-titulo" class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2"></h2>
+            <p id="campania-bajada" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"></p>
+          </div>
+
+          <div id="tarjetas-aporte" class="grid gap-6 md:grid-cols-3 max-w-md mx-auto md:max-w-none"></div>
+
+          <div class="mt-10 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-xl p-6">
+            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-5 text-center">¿Cómo funciona?</h3>
+            <ol id="campania-pasos" class="grid gap-5 md:grid-cols-3"></ol>
+            <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-6 pt-4 border-t border-gray-100 dark:border-zinc-700">
+              Los regalos son un agradecimiento por tu aporte. Las imágenes son ilustrativas y el diseño final de los artículos puede variar.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <!-- Reproducción de la sección actual del sitio -->
       <section class="max-w-screen-lg mx-auto px-4 pt-10 pb-8">
         <h1 class="text-3xl lg:text-5xl font-extrabold text-center mb-6 text-blue-700 dark:text-blue-400 tracking-tight">Sumate a nuestra misión</h1>
@@ -138,29 +161,6 @@
               <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Todo nuestro trabajo es voluntario. Podés aportar en áreas como diseño, desarrollo, comunicación, eventos y más.</p>
               <a href="#" data-aviso="una conversación de WhatsApp para sumarse como voluntario/a" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-sm">Contactanos por WhatsApp</a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- NUEVA SECCIÓN: merchandising solidario (se completa desde js/app.js con los datos de js/config.js) -->
-      <section id="regalo-con-proposito" class="scroll-mt-28 bg-gradient-to-b from-blue-50/70 to-white dark:from-blue-950/30 dark:to-zinc-800 border-y border-blue-100 dark:border-zinc-700 py-12 mb-10">
-        <div class="max-w-5xl mx-auto px-4">
-          <div class="text-center mb-8">
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-white dark:bg-zinc-800 border border-blue-200 dark:border-blue-700 rounded-full px-3 py-1 mb-4">
-              <span aria-hidden="true">🎁</span> Nuevo · Campaña solidaria
-            </span>
-            <h2 id="campania-titulo" class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2"></h2>
-            <p id="campania-bajada" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"></p>
-          </div>
-
-          <div id="tarjetas-aporte" class="grid gap-6 md:grid-cols-3 max-w-md mx-auto md:max-w-none"></div>
-
-          <div class="mt-10 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-xl p-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-5 text-center">¿Cómo funciona?</h3>
-            <ol id="campania-pasos" class="grid gap-5 md:grid-cols-3"></ol>
-            <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-6 pt-4 border-t border-gray-100 dark:border-zinc-700">
-              Los regalos son un agradecimiento por tu aporte. Las imágenes son ilustrativas y el diseño final de los artículos puede variar.
-            </p>
           </div>
         </div>
       </section>
