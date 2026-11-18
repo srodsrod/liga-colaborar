@@ -1,0 +1,44 @@
+/*
+  Fuente de css/estilos.css (Tailwind CSS v4).
+  NO hace falta para ver el sitio. Solo sirve para regenerar estilos.css
+  si se agregan clases nuevas de Tailwind en el HTML o el JS:
+    npm install tailwindcss@4.1.11 @tailwindcss/cli@4.1.11
+    npx @tailwindcss/cli -i css/tailwind-fuente.css -o css/estilos.css --minify
+*/
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "../colabora.html";
+@source "../js";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-brand: "Roboto Condensed", "Serif";
+}
+
+html { scroll-behavior: smooth; }
+
+@keyframes aparecer { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.animar-entrada { animation: aparecer 0.35s ease-out both; }
+
+/* Brillo que recorre el botón ¡Colabora! (similar al del sitio oficial) */
+.brillo { position: relative; overflow: hidden; }
+.brillo::after {
+  content: ""; position: absolute; inset: 0; transform: translateX(-120%) skewX(-20deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.45), transparent);
+  animation: brillo 3.5s ease-in-out infinite;
+}
+@keyframes brillo { 0%, 60% { transform: translateX(-120%) skewX(-20deg); } 100% { transform: translateX(220%) skewX(-20deg); } }
+
+/* Entrada de la burbuja promocional */
+.burbuja-entrada { animation: burbuja-entrada .6s cubic-bezier(.2,1.4,.4,1) both; transform-origin: bottom right; }
+@keyframes burbuja-entrada { from { opacity: 0; transform: translateY(24px) scale(.9); } to { opacity: 1; transform: none; } }
+
+/* Latido suave del botón 🎁 */
+.burbuja-latido { animation: latido 2.4s ease-in-out infinite; }
+@keyframes latido { 0%, 70%, 100% { transform: scale(1); } 80% { transform: scale(1.12); } 90% { transform: scale(.97); } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animar-entrada, .burbuja-entrada, .burbuja-latido, .brillo::after, .animate-ping { animation: none; }
+}

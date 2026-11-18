@@ -460,6 +460,47 @@
     enviarFormulario();
   });
 
+  // ---------- Burbuja promocional (solo en la página de inicio) ----------
+  function iniciarBurbuja() {
+    const burbuja = $("#burbuja");
+    const mini = $("#burbuja-mini");
+    if (!burbuja || !mini) return;
+
+    const minimo = Math.min(...CFG.niveles.map((n) => n.monto));
+    $("#burbuja-monto").textContent = formatearMonto(minimo);
+
+    const mostrar = (el, si) => {
+      el.classList.toggle("hidden", !si);
+      el.classList.toggle(el === mini ? "flex" : "block", si);
+    };
+    let cerrada = false;
+    try {
+      cerrada = sessionStorage.getItem("burbujaCerrada") === "1";
+    } catch (e) {}
+
+    if (cerrada) {
+      mostrar(mini, true);
+    } else {
+      setTimeout(() => mostrar(burbuja, true), 1200); // aparece después de un momento
+    }
+
+    $("#burbuja-cerrar").addEventListener("click", () => {
+      mostrar(burbuja, false);
+      mostrar(mini, true);
+      try {
+        sessionStorage.setItem("burbujaCerrada", "1");
+      } catch (e) {}
+    });
+    mini.addEventListener("click", () => {
+      mostrar(mini, false);
+      mostrar(burbuja, true);
+      try {
+        sessionStorage.removeItem("burbujaCerrada");
+      } catch (e) {}
+    });
+  }
+
   // ---------- Inicio ----------
-  renderMerch();
+  if ($("#tarjetas-aporte")) renderMerch();
+  iniciarBurbuja();
 })();

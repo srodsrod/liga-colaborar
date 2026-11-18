@@ -4,14 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>¡Colabora! | Liga Asperger 7 — Demo académica</title>
+  <title>Liga Asperger 7 — Demo académica</title>
   <link rel="icon" type="image/svg+xml" href="img/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/estilos.css" />
   <script>
-    // Modo oscuro igual que el sitio oficial (clase .dark en <html>)
     try {
       if (localStorage.theme === "dark" || (!("theme" in localStorage) && matchMedia("(prefers-color-scheme: dark)").matches)) {
         document.documentElement.classList.add("dark");
@@ -23,11 +22,12 @@
 
   <!-- ================= ENCABEZADO (reproducción del sitio oficial) ================= -->
   <header id="encabezado" class="fixed top-0 w-full z-50 h-16 md:h-24 flex items-center justify-between flex-wrap px-5 border-b border-zinc-200 dark:border-zinc-900 dark:bg-zinc-800 bg-white">
-    <a href="#" data-ir="colabora" class="flex items-center h-16 md:h-24">
+    <a href="index.html" class="flex items-center h-16 md:h-24">
       <img src="img/logo.svg" alt="Logo de La Liga Asperger 7" class="max-h-12 md:max-h-20 mr-4" />
       <span class="font-brand text-2xl">Liga Asperger 7</span>
     </a>
-    <div class="flex lg:hidden ml-4">
+    <div class="flex items-center lg:hidden ml-4">
+      <a href="colabora.html" class="hidden sm:inline-block uppercase font-bold text-sm py-2 px-3 mr-4 rounded bg-blue-600 hover:bg-blue-500 text-white brillo">¡Colabora!</a>
       <button id="boton-menu" aria-label="Abrir menú" aria-expanded="false" class="rounded text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 border p-2 border-zinc-200 dark:hover:bg-zinc-700 transition cursor-pointer">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path id="icono-menu" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
@@ -36,12 +36,12 @@
     </div>
     <nav id="menu" class="hidden w-full lg:w-auto lg:block pt-2 lg:pt-0 border-t lg:border-t-0 border-zinc-300">
       <ul class="flex flex-col lg:flex-row items-center lg:gap-3 flex-wrap">
-        <li class="block w-full lg:inline lg:w-auto text-center"><a href="https://ligaasperger7.org.ar/" target="_blank" rel="noopener noreferrer" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700">Inicio</a></li>
+        <li class="block w-full lg:inline lg:w-auto text-center"><a href="index.html" aria-current="page" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700">Inicio</a></li>
         <li class="block w-full lg:inline lg:w-auto text-center"><a href="https://ligaasperger7.org.ar/quienes-somos/" target="_blank" rel="noopener noreferrer" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700">¿Quiénes somos?</a></li>
         <li class="block w-full lg:inline lg:w-auto text-center"><a href="https://ligaasperger7.org.ar/que-es-el-asperger/" target="_blank" rel="noopener noreferrer" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700">¿Asperger?</a></li>
         <li class="block w-full lg:inline lg:w-auto text-center"><a href="https://ligaasperger7.org.ar/reuniones-y-eventos/" target="_blank" rel="noopener noreferrer" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700">Actividades</a></li>
         <li class="block w-full lg:inline lg:w-auto text-center"><a href="https://ligaasperger7.org.ar/contacto/" target="_blank" rel="noopener noreferrer" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700">Contacto</a></li>
-        <li class="block w-full lg:inline lg:w-auto text-center"><a href="#" data-ir="colabora" aria-current="page" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block bg-white dark:bg-zinc-800 text-blue-700 dark:text-blue-400 border-2 border-blue-500">¡Colabora!</a></li>
+        <li class="block w-full lg:inline lg:w-auto text-center"><a href="colabora.html" class="uppercase text-sm py-3 lg:py-2 px-2 rounded block lg:inline-block bg-blue-600 hover:bg-blue-500 text-white font-bold brillo">¡Colabora!</a></li>
         <li class="block w-full lg:inline lg:w-auto text-center">
           <button id="boton-tema" type="button" aria-label="Cambiar modo claro/oscuro" class="w-full text-zinc-700 dark:text-zinc-200 hover:bg-zinc-100 dark:hover:bg-zinc-700 rounded text-sm p-2.5 cursor-pointer">
             <svg class="w-5 h-5 inline dark:hidden" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" /></svg>
@@ -53,145 +53,33 @@
     </nav>
   </header>
 
-  <main class="mt-16 md:mt-24 min-h-[60vh]">
-
-    <!-- ================= VISTA 1: COLABORAR ================= -->
-    <div id="vista-colabora">
-
-      <!-- NUEVA SECCIÓN: merchandising solidario (se completa desde js/app.js con los datos de js/config.js) -->
-      <section id="regalo-con-proposito" class="scroll-mt-28 bg-gradient-to-b from-blue-50/70 to-white dark:from-blue-950/30 dark:to-zinc-800 border-y border-blue-100 dark:border-zinc-700 py-12">
-        <div class="max-w-5xl mx-auto px-4">
-          <div class="text-center mb-8">
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-blue-700 dark:text-blue-300 bg-white dark:bg-zinc-800 border border-blue-200 dark:border-blue-700 rounded-full px-3 py-1 mb-4">
-              <span aria-hidden="true">🎁</span> Nuevo · Campaña solidaria
-            </span>
-            <h2 id="campania-titulo" class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2"></h2>
-            <p id="campania-bajada" class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto"></p>
-          </div>
-
-          <div id="tarjetas-aporte" class="grid gap-6 md:grid-cols-3 max-w-md mx-auto md:max-w-none"></div>
-
-          <div class="mt-10 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-xl p-6">
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-5 text-center">¿Cómo funciona?</h3>
-            <ol id="campania-pasos" class="grid gap-5 md:grid-cols-3"></ol>
-            <p class="text-xs text-gray-500 dark:text-gray-400 text-center mt-6 pt-4 border-t border-gray-100 dark:border-zinc-700">
-              Los regalos son un agradecimiento por tu aporte. Las imágenes son ilustrativas y el diseño final de los artículos puede variar.
-            </p>
+  <main class="mt-16 md:mt-24">
+    <!-- ================= PORTADA (reproducción de la primera parte del inicio oficial) ================= -->
+    <section class="h-[88vh] flex flex-col items-center justify-end text-white w-full">
+      <div class="h-full w-full xl:bg-fixed bg-cover bg-bottom flex flex-col items-center justify-end" style="background-image: url('img/portada.webp')">
+        <div class="py-3 flex flex-col items-center pb-4">
+          <h1 class="font-brand text-4xl lg:text-7xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.99)] font-black">Liga Asperger 7</h1>
+          <div class="text-lg lg:text-2xl p-6 max-w-[60ch] space-y-4 text-center font-bold">
+            <p class="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.99)]">Somos una Asociación Civil sin fines de lucro, dedicada a la difusión del síndrome de Asperger.</p>
+            <p class="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.99)] hidden sm:block">También realizamos trabajo de contención y asesoramiento a adultos Asperger o con sospechas de serlo.</p>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Reproducción de la sección actual del sitio -->
-      <section class="max-w-screen-lg mx-auto px-4 pt-10 pb-8">
-        <h1 class="text-3xl lg:text-5xl font-extrabold text-center mb-6 text-blue-700 dark:text-blue-400 tracking-tight">Sumate a nuestra misión</h1>
-        <p class="text-lg leading-relaxed mb-4 lg:text-justify text-gray-800 dark:text-gray-200">
-          En la <strong>Liga Asperger 7</strong> trabajamos todos los días para acompañar, visibilizar y generar oportunidades para las personas Asperger y sus familias. Somos una organización sin fines de lucro. No recibimos aportes de empresas ni gobiernos. Tu colaboración hace posible todo lo que hacemos.
-        </p>
-        <p class="text-base text-gray-600 dark:text-gray-400 text-center mt-2">Cada aporte, por chico que sea, hace la diferencia.</p>
-      </section>
+    <section class="py-12 px-4 m-auto max-w-3xl text-lg space-y-4">
+      <p>Somos un grupo conformado por adultos Asperger que, junto al entonces presidente de la Asociación Asperger Argentina, unificamos ideas y así dimos inicio a este proyecto.</p>
+      <p>El 15 de noviembre del 2015 decidimos agruparnos para compartir con otros Asperger, familias, profesionales de la salud y educadores, nuestras experiencias. Contarles cómo sobrevivimos a la niñez, el bullying, la escuela, la religión, la adolescencia, el trabajo, los noviazgos, el matrimonio y cómo afrontamos la paternidad. Porque llegamos a la adultez heridos, sí, pero vivos y encaminados</p>
+      <a href="https://ligaasperger7.org.ar/quienes-somos/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center border border-red-600 text-red-600 font-semibold rounded-lg transition duration-300 ease-in-out hover:bg-red-500 hover:text-white dark:border-red-300 dark:text-red-300 dark:hover:bg-red-300 dark:hover:text-gray-900 text-lg py-2 px-4">
+        Quiénes somos
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+      </a>
+    </section>
 
-      <section class="max-w-3xl mx-auto px-4 pb-12">
-        <div class="text-center mb-8">
-          <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2">Elegí cómo aportar</h2>
-          <p class="text-gray-600 dark:text-gray-400">Hacé click en el monto que prefieras</p>
-        </div>
-
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-            Asociate
-          </h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Ser socio/a es la forma más valiosa de ayudarnos, porque nos permite planificar a largo plazo.</p>
-          <a href="#" data-aviso="la suscripción mensual de MercadoPago ($8.000 por mes)" class="flex flex-col items-center justify-center p-6 bg-blue-50 dark:bg-blue-900/30 border-2 border-blue-300 dark:border-blue-600 rounded-xl hover:border-blue-500 hover:bg-blue-100 dark:hover:bg-blue-900/50 transition max-w-sm mx-auto">
-            <span class="text-3xl lg:text-4xl font-bold text-blue-700 dark:text-blue-400">$8.000</span>
-            <span class="text-sm text-gray-600 dark:text-gray-400">por mes</span>
-            <span class="mt-2 text-blue-600 dark:text-blue-400 font-medium">Hacete socio/a →</span>
-          </a>
-          <a href="#" data-aviso="el formulario de registro de socios/as (Google Forms)" class="block mt-4 text-center text-sm text-blue-600 dark:text-blue-400 hover:underline">Completá el formulario de registro</a>
-        </div>
-
-        <div class="mb-8">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg>
-            Aporte Único
-          </h3>
-          <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Aportá lo que puedas, cuando puedas</p>
-          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
-            <a href="#" data-aviso="el checkout de MercadoPago por $5.000" class="flex flex-col items-center justify-center p-4 bg-green-50 dark:bg-green-900/30 border-2 border-green-200 dark:border-green-700 rounded-xl hover:border-green-500 hover:bg-green-100 dark:hover:bg-green-900/50 transition">
-              <span class="text-2xl lg:text-3xl font-bold text-green-700 dark:text-green-400">$5.000</span>
-              <span class="text-sm text-gray-600 dark:text-gray-400">una vez</span>
-            </a>
-            <a href="#" data-aviso="el checkout de MercadoPago por $10.000" class="flex flex-col items-center justify-center p-4 bg-green-50 dark:bg-green-900/30 border-2 border-green-200 dark:border-green-700 rounded-xl hover:border-green-500 hover:bg-green-100 dark:hover:bg-green-900/50 transition">
-              <span class="text-2xl lg:text-3xl font-bold text-green-700 dark:text-green-400">$10.000</span>
-              <span class="text-sm text-gray-600 dark:text-gray-400">una vez</span>
-            </a>
-            <a href="#" data-aviso="el link de pago de MercadoPago con monto libre" class="flex flex-col items-center justify-center p-4 bg-green-50 dark:bg-green-900/30 border-2 border-green-200 dark:border-green-700 rounded-xl hover:border-green-500 hover:bg-green-100 dark:hover:bg-green-900/50 transition">
-              <span class="text-2xl lg:text-3xl font-bold text-green-700 dark:text-green-400">Otro monto</span>
-              <span class="text-sm text-gray-600 dark:text-gray-400">una vez</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">Los pagos se procesan de forma segura a través de MercadoPago.</div>
-
-        <div class="border-t border-gray-200 dark:border-gray-700 pt-8">
-          <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">Otras formas de colaborar</h3>
-          <div class="grid md:grid-cols-2 gap-4 mb-6">
-            <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
-              <h4 class="font-medium text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-600 dark:text-gray-400" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2" /><line x1="2" x2="22" y1="10" y2="10" /></svg>
-                Transferencia bancaria
-              </h4>
-              <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-1 break-words">
-                <li><strong>Banco:</strong> BANCO GALICIA</li>
-                <li><strong>Titular:</strong> LIGA ASPERGER 7 ASOCIACION CIVIL</li>
-                <li><strong>CBU:</strong> 0070095520000007335815</li>
-                <li><strong>Alias:</strong> LIGA.ASPERGER.7</li>
-              </ul>
-              <p class="text-xs text-gray-500 mt-2">
-                También podés asociarte o hacer un aporte único a través de transferencia bancaria. Ante cualquier duda, o para registrarte como socio/a
-                <a href="#" data-aviso="una conversación de WhatsApp con la Liga" class="text-blue-600 dark:text-blue-400 hover:underline">contactanos por WhatsApp</a>.
-              </p>
-            </div>
-            <div class="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl">
-              <h4 class="font-medium text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-600 dark:text-gray-400" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                Trabajo voluntario
-              </h4>
-              <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Todo nuestro trabajo es voluntario. Podés aportar en áreas como diseño, desarrollo, comunicación, eventos y más.</p>
-              <a href="#" data-aviso="una conversación de WhatsApp para sumarse como voluntario/a" class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline text-sm">Contactanos por WhatsApp</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Cierre de la sección actual del sitio -->
-      <section class="max-w-2xl mx-auto text-gray-800 dark:text-gray-200 p-4">
-        <h2 class="text-xl lg:text-2xl font-bold mb-4 text-gray-900 dark:text-white">¿A qué se destinan los fondos?</h2>
-        <ul class="space-y-2">
-          <li class="flex items-start gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 mt-0.5 flex-shrink-0" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>Costos fijos de la organización</li>
-          <li class="flex items-start gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 mt-0.5 flex-shrink-0" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>Actividades de difusión</li>
-          <li class="flex items-start gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 mt-0.5 flex-shrink-0" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>Producción de material accesible sobre Asperger</li>
-          <li class="flex items-start gap-2"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 mt-0.5 flex-shrink-0" aria-hidden="true"><polyline points="20 6 9 17 4 12" /></svg>Insumos para actividades y talleres</li>
-        </ul>
-      </section>
-      <section class="max-w-2xl mx-auto text-gray-800 dark:text-gray-200 p-4 mt-6">
-        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 text-center">
-          <p class="text-lg text-gray-700 dark:text-gray-300">Liga Asperger 7 es una organización sin fines de lucro legalmente constituida en Argentina (Resolución IGJ Nº000150).</p>
-        </div>
-      </section>
-      <section class="max-w-2xl mx-auto text-gray-800 dark:text-gray-200 p-4 mt-6 mb-12">
-        <h2 class="text-xl lg:text-2xl font-bold mb-4 text-blue-700 dark:text-blue-400 text-center">Gracias por acompañarnos</h2>
-        <p class="text-center text-gray-600 dark:text-gray-400">Cada aporte hace posible nuestro trabajo por una sociedad más inclusiva.</p>
-        <p class="text-3xl text-center mt-4" aria-hidden="true">❤️🖤💚</p>
-      </section>
-    </div>
-
-    <!-- ================= VISTA 2: FORMULARIO (se genera desde js/app.js) ================= -->
-    <div id="vista-formulario" hidden></div>
-
-    <!-- ================= VISTA 3: CONFIRMACIÓN (se genera desde js/app.js) ================= -->
-    <div id="vista-confirmacion" hidden></div>
+    <p class="text-center text-sm text-gray-500 dark:text-gray-400 pb-10 px-4">
+      (Prototipo: se reproduce solo el comienzo de la página de inicio. El resto está en
+      <a href="https://ligaasperger7.org.ar/" target="_blank" rel="noopener noreferrer" class="text-blue-600 dark:text-blue-400 hover:underline">el sitio oficial</a>.)
+    </p>
   </main>
 
   <!-- ================= PIE (reproducción del sitio oficial) ================= -->
@@ -227,19 +115,49 @@
     </div>
   </footer>
 
-  <!-- Indicación discreta de demo -->
-  <div class="fixed bottom-3 left-3 z-40 text-[11px] leading-tight rounded-full bg-zinc-900/85 text-white px-3 py-1.5 shadow pointer-events-none select-none" title="Prototipo académico — no es el sitio oficial">
-    Demo académica · ITBA
+  <!-- ================= BURBUJA PROMOCIONAL (nueva) =================
+       Aparece unos segundos después de cargar. Al tocarla lleva a la sección de regalos.
+       Si se cierra, queda un botón redondo 🎁 para volver a abrirla.
+       Los textos se editan acá; el monto mínimo sale de js/config.js. -->
+  <div id="burbuja" class="fixed z-40 bottom-4 right-4 left-4 sm:left-auto sm:w-96 hidden" role="complementary" aria-label="Nueva campaña de regalos">
+    <div class="burbuja-entrada relative rounded-2xl shadow-2xl ring-1 ring-black/5 overflow-hidden bg-white dark:bg-zinc-900">
+      <a href="colabora.html#regalo-con-proposito" class="group block">
+        <div class="relative bg-gradient-to-br from-blue-600 to-blue-800 px-5 pt-4 pb-12 text-white">
+          <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider bg-white/20 rounded-full px-2.5 py-1">
+            <span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-300 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span></span>
+            Nuevo
+          </span>
+          <p class="font-brand text-2xl leading-tight mt-2 pr-8">¡Colaborá con la Liga y llevate un regalo! 🎁</p>
+        </div>
+        <div class="relative -mt-9 mx-4 flex items-end gap-3">
+          <div class="flex-shrink-0 w-24 h-20 rounded-xl bg-blue-50 dark:bg-zinc-800 ring-4 ring-white dark:ring-zinc-900 flex items-center justify-center p-1.5 group-hover:-rotate-3 transition-transform">
+            <img src="img/productos/embajador.svg" alt="" class="w-full h-full object-contain" />
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-300 pb-1">Llaveros, bolsas y cuadernos de la Liga, <strong class="text-gray-900 dark:text-white">desde <span id="burbuja-monto">$30.000</span></strong>.</p>
+        </div>
+        <div class="px-4 pt-3 pb-4">
+          <span class="flex items-center justify-center gap-2 w-full rounded-lg py-2.5 font-semibold text-white bg-green-600 group-hover:bg-green-700 transition">
+            Quiero mi regalo
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+          </span>
+          <span class="block text-center text-[11px] text-gray-400 mt-2">Campaña por tiempo limitado · Demo académica</span>
+        </div>
+      </a>
+      <button id="burbuja-cerrar" type="button" aria-label="Cerrar aviso" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/15 hover:bg-white/30 text-white flex items-center justify-center cursor-pointer transition">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+      </button>
+    </div>
   </div>
 
-  <!-- Aviso que reemplaza las redirecciones reales (MercadoPago, Google Forms, WhatsApp) -->
-  <div id="modal-aviso" class="fixed inset-0 z-[60] items-center justify-center p-4 bg-black/50 hidden">
-    <div role="dialog" aria-modal="true" aria-labelledby="aviso-titulo" class="w-full max-w-md rounded-xl bg-white dark:bg-zinc-800 p-6 shadow-xl animar-entrada">
-      <h2 id="aviso-titulo" class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Opción existente del sitio</h2>
-      <p class="text-gray-700 dark:text-gray-300">En el sitio oficial, este botón lleva a <strong id="aviso-destino"></strong>.</p>
-      <p class="text-sm text-gray-500 dark:text-gray-400 mt-2">En esta demostración académica no se realizan pagos ni se abren servicios externos.</p>
-      <button id="aviso-cerrar" type="button" class="mt-5 w-full rounded-lg py-2.5 font-medium text-white bg-blue-700 hover:bg-blue-800 cursor-pointer">Entendido</button>
-    </div>
+  <!-- Botón compacto que aparece al cerrar la burbuja -->
+  <button id="burbuja-mini" type="button" aria-label="Ver campaña: colaborá y llevate un regalo" class="fixed z-40 bottom-4 right-4 w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 text-white text-2xl shadow-xl cursor-pointer hidden items-center justify-center burbuja-latido">
+    🎁
+    <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-500 ring-2 ring-white dark:ring-zinc-800"></span>
+  </button>
+
+  <!-- Indicación discreta de demo -->
+  <div class="fixed bottom-3 left-3 z-30 text-[11px] leading-tight rounded-full bg-zinc-900/85 text-white px-3 py-1.5 shadow pointer-events-none select-none hidden sm:block">
+    Demo académica · ITBA
   </div>
 
   <script src="js/config.js"></script>
